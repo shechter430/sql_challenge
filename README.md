@@ -1,7 +1,7 @@
 # SQL Challenge
 ### SQL Homework - Employee Database: A Mystery in Two Parts
 
-![sql.png](sql.png)
+![sql.png](images/sql.png)
 
 ## Background
 
