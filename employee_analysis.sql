@@ -19,11 +19,21 @@ ON d.dept_no = dm.dept_no
 INNER JOIN "Employees" AS e
 ON dm.emp_no = e.emp_no;
 
--- List the department of each employee with the following information: employee number, last name, first name, and department name.
+-- List the department of each employee with the following information: 
+-- employee number, last name, first name, and department name.
+SELECT de.emp_no, e.last_name, e.first_name, d.dept_name
+FROM "Dept_Employees" AS de
+JOIN "Employees" AS e
+ON de.emp_no = e.emp_no
+JOIN "Departments" AS d
+ON de.dept_no = d.dept_no;
 
-
--- List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
-
+-- List first name, last name, and sex for employees whose first name is 
+-- "Hercules" and last names begin with "B."
+SELECT first_name, last_name, gender 
+FROM "Employees"
+WHERE first_name = 'Hercules'
+		and last_name LIKE 'B%'
 
 -- List all employees in the Sales department, including their employee number, last name, first name, and department name.
 
