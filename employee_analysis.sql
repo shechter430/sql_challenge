@@ -5,12 +5,19 @@ JOIN "Salaries" AS s ON
 e.emp_no=s.emp_no; 
 
 -- List first name, last name, and hire date for employees who were hired in 1986.
+SELECT first_name, last_name, hire_date
+FROM "Employees"
+WHERE hire_date >= '1986-01-01' 
+       and hire_date < '1987-01-01'
 
-
-
-
--- List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
-
+-- List the manager of each department with the following information: 
+-- department number, department name, the manager's employee number, last name, first name.
+SELECT dm.dept_no, dm.emp_no, d.dept_name, e.last_name, e.first_name
+FROM "Dept_Manager" AS dm
+INNER JOIN "Departments" AS d
+ON d.dept_no = dm.dept_no
+INNER JOIN "Employees" AS e
+ON dm.emp_no = e.emp_no;
 
 -- List the department of each employee with the following information: employee number, last name, first name, and department name.
 
