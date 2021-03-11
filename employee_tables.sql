@@ -71,11 +71,10 @@ REFERENCES "Titles" ("title_id");
 ALTER TABLE "Salaries" ADD CONSTRAINT "fk_Salaries_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "Employees" ("emp_no");
 
+-- Checking that tables were created correctly
 SELECT * FROM "Departments";
 SELECT * FROM "Dept_Employees";
 SELECT * FROM "Dept_Manager";
 SELECT * FROM "Employees";
 SELECT * FROM "Salaries";
 SELECT * FROM "Titles";
-
-
