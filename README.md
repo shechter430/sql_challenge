@@ -14,11 +14,11 @@ The CSV files were reviewed and a sketch out an ERD of the tables is shown below
 
 #### Data Engineering
 
-* A [table schema](sql_challenge/employee_tables.sql) was created for each of the six CSV files. 
+* A [table schema](employee_tables.sql) was created for each of the six CSV files. 
 
 #### Data Analysis
 
-The following was completed in the [analysis](sql_challenge/employee_analysis.sql):
+The following was completed in the [analysis](employee_analysis.sql):
 
 1. List the following details of each employee: employee number, last name, first name, sex, and salary.
 
